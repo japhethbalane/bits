@@ -43,10 +43,10 @@ function world() {
 function getRandomCharacter() {
     var text = "";
     var possible =
-		"'`~!@#$%^&*()_+=-"+
-		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
-		"abcdefghijklmnopqrstuvwxyz"+
-		"0123456789";
+		"'`~!@#$%^&*()_+=-";
+		// "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
+		// "abcdefghijklmnopqrstuvwxyz"+
+		// "0123456789";
     for( var i=0; i < randomBetween(5,100); i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
@@ -118,13 +118,13 @@ function Bit(x, y, f) {
 
 	this.update = function() {
 		if (!this.isActive) this.text = getRandomCharacter();
-		this.y+=this.fontSize/2;
+		this.y+=this.fontSize/5;
 		if (this.y > canvas.height+this.fontSize) this.y = 0;
 	}
 
 	this.draw = function() {
 		// context.shadowBlur = 15;
-		// context.shadowColor = "#36CDFF";
+		context.shadowColor = "#36CDFF";
 		context.fillStyle = "#36CDFF";
 
 		context.font = this.fontSize + "px Arial";
