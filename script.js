@@ -20,8 +20,11 @@ function generateBitArrs(count) {
 
 //////////////////////////////////////////////////////////////////////////////
 
+context.fillStyle = "#000";
+context.fillRect(0,0,canvas.width,canvas.height);
+
 function clearCanvas() {
-	context.fillStyle = "#000";
+	context.fillStyle = "rgba(30,30,30,0.3)";
 	context.fillRect(0,0,canvas.width,canvas.height);
 }
 
